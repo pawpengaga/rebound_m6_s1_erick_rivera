@@ -21,8 +21,6 @@ public class CalculadoraBaja implements ICalculadora {
   @Override
   public List<Alumno> calcularPromedios() {
 
-    int myindex = 0;
-
     for (Alumno alumno : alumnos) {
       float sumaNotas = 0F;
       int contador = 0;

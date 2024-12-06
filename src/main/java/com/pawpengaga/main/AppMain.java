@@ -32,12 +32,26 @@ public class AppMain {
     alumnos.add(new Alumno("19886598","MauriceZboncak",Arrays.asList(4,2,4,3,2,5,1),0f));
     alumnos.add(new Alumno("18939934","KenHaley",Arrays.asList(6,7,2,1),0f));
 
+    // Ahora se hace la inyeccion
     ICalculadora calculadora = new Calculadora(alumnos);
+    ICalculadora calculadora2 = new CalculadoraBaja(alumnos);
+    ICalculadora calculadora3 = new CalculadoraMinMax(alumnos);
 
+    // Segunda inyeccion
     Profesor profesor = new Profesor(calculadora);
+    Profesor profesor2 = new Profesor(calculadora2);
+    Profesor profesor3 = new Profesor(calculadora3);
 
-    System.out.println();
+    // Mostrar resultados
+    System.out.println("-------------------------------");
+    System.out.println("PROFESOR 1 --------------------");
     profesor.mostrarAlumnosPromedio();
+    System.out.println("-------------------------------");
+    System.out.println("PROFESOR 2 --------------------");
+    profesor2.mostrarAlumnosPromedio();
+    System.out.println("-------------------------------");
+    System.out.println("PROFESOR 3 --------------------");
+    profesor3.mostrarAlumnosPromedio();
 
   }
 
