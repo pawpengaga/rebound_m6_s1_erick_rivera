@@ -9,7 +9,9 @@ public class Profesor {
   }
 
   public void mostrarAlumnosPromedio(){
-    System.out.println(calculadora.calcularPromedios());
+    for (Alumno alumno : calculadora.calcularPromedios()) {
+      System.out.println(alumno);
+    }
   }
 
 }

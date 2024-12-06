@@ -44,7 +44,7 @@ public class Alumno {
   }
 
   public float getPromedio() {
-    return this.promedio;
+    return Math.round(promedio * 10f) / 10f;
   }
 
   public void setPromedio(float promedio) {
@@ -54,12 +54,11 @@ public class Alumno {
   @Override
   public String toString() {
     return "{" +
-      " rut='" + getRut() + "'" +
-      ", nombre='" + getNombre() + "'" +
-      ", notas='" + getNotas() + "'" +
-      ", promedio='" + getPromedio() + "'" +
+      " RUT: '" + getRut() + "'" +
+      ", Nombre: '" + getNombre() + "'" +
+      ", Notas: '" + getNotas() + "'" +
+      ", Promedio: '" + getPromedio() + "'" +
       " }";
   }
-
 
 }
